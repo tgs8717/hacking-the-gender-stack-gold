@@ -1,7 +1,7 @@
 from tokenize import group
 from rdkit import Chem
 from rdkit.Chem.Draw import rdMolDraw2D
-
+from rdkit.Chem import QED
 from typing import Dict, List
 
 ATOM_PROP_ATOM_LABEL = "atomLabel"
