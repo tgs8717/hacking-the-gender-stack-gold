@@ -9,3 +9,8 @@ class Core(models.Model):
 
 class RGroup(models.Model):
     smiles = models.TextField(null=False, unique=True)
+
+
+class CompoundRepo(models.Model):
+    smiles = models.TextField(null=False, unique=True)
+    logP = models.IntegerField(null=False)

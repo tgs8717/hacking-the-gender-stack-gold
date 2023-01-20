@@ -15,6 +15,7 @@ urlpatterns = [
     path(prefix("health/"), include("api.health.urls")),
     path(prefix("image/"), include("api.image.urls")),
     path(prefix("core/"), include("api.core.urls")),
+    path(prefix("compounds/"), include("api.compounds.urls")),
     # Dynamic API documentation endpoints
     path(prefix("schema/yaml/"), SpectacularAPIView.as_view(), name="schema"),
     path(
