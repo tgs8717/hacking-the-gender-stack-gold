@@ -1,5 +1,9 @@
-from django.urls import path
+from rest_framework.routers import DefaultRouter
+from django.urls import path, include
 
-from api.compounds import views
+from .views import Compounds
 
-urlpatterns = [path("", views.Compounds.as_view())]
+router = DefaultRouter()
+router.register("", Compounds, "compounds")
+
+urlpatterns = [path("", include(router.urls))]
