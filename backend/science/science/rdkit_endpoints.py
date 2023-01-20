@@ -1,9 +1,11 @@
 from tokenize import group
 from rdkit import Chem
 from rdkit.Chem.Draw import rdMolDraw2D
-from typing import List
+
+from typing import Dict, List
 
 ATOM_PROP_ATOM_LABEL = "atomLabel"
+ALL_QED_PROPS = ["MW", "ALOGP", "HBA", "HBD", "PSA", "ROTB", "AROM", "ALERTS"]
 
 
 def generate_image(mol_smi: str, width: int = 400, height: int = 400) -> str:
